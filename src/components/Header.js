@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Nav, Navbar, NavbarToggler, NavbarBrand, Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import hands2 from '../banner/hands2.png';
+
 
 class Header extends Component {
     constructor(props) {
@@ -35,6 +37,10 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
+                <div className="banner">
+	                <img src={hands2} alt="Banner" />
+	                <h2>Teachers Connect</h2>
+			    </div>
             </div>
         );
     }
