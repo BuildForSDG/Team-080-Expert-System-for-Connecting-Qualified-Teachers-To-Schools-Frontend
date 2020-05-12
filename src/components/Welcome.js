@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import teacher from '../banner/teacher.png';
 import linkedin from '../banner/linkedin.png'
-//import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 
 class Welcome extends Component {
@@ -19,9 +19,10 @@ class Welcome extends Component {
 			    </div>
                 <div className="rectangle">
                     <span className="linkedin"><img src={linkedin} alt="linkedin logo" /></span> 
-                    <div className="Sign-in-with-LinkedI">Sign in with LinkedIn</div>
+                    <div>Sign in with LinkedIn</div>
                 </div>
-                <div className="create">Create an Account</div>
+                <Link to="/createAcc" className="create">Create an Account</Link>
+                <div className="sign-in"><span className="Already-have-an-acco">Already have an account?</span> <NavLink to="/signin" className="signin">Sign in</NavLink></div>
             </div>
         );
     }

@@ -22,11 +22,6 @@ img {
 	width: 45%;
 }
 
-.loko {
-	display: flex;
-	flex-direction: row;
-}
-
 .teacher_vector {
 	margin-top: 50px;
   	width: 270px;
@@ -43,13 +38,13 @@ img {
 	padding-left: 25px;
 }
 
-@media(min-width: 800px) {
+@media(min-width: 900px) {
 	.teacher_vector {
 		margin-top: 100px;
 	}
 
 	.logo {
-		max-width: 25%;
+		max-width: 20%;
 	}
 
 	.message {
@@ -132,13 +127,25 @@ img {
 	}
 }
 
-
-
-.Sign-in-with-LinkedI {
-
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
+.Already-have-an-acco {
+  height: 18px;
   
+  opacity: 0.6;
+  font-family: CircularStd;
+  font-size: 14px;
+  
+  color: #ffffff;
+}
+
+.sign-in {
+	margin-top: 29px;
+}
+
+
+.signin {
+  width: 43px;
+  height: 18px;
+  font-family: CircularStd;
+  
+  color: #ffffff;
 }
