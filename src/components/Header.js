@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarToggler, NavbarBrand, Collapse, NavItem } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, Button, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import hands2 from '../banner/hands2.png';
+import logo from '../banner/logo.png';
 
 
 class Header extends Component {
@@ -27,20 +27,15 @@ class Header extends Component {
             <div>
                 <Navbar dark expand="md">
                     <div className="container">
-                        <NavbarToggler onClick={this.toggleNav} />
-                        <NavbarBrand className="mr-auto" href="/"> Teachers Connect
+                        <NavbarBrand className="mr-auto logo" href="/"> <img src={logo} alt="Logo" />
                     	</NavbarBrand>
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
-                                
+                            <Nav className="ml-auto" navbar>
+                                <NavItem>
+                                    <NavLink className="nav-link" to='/schools'><span className="fa fa-user-plus fa-lg"></span><Button className="butn"> For Schools</Button></NavLink>
+                                </NavItem>
                             </Nav>
-                        </Collapse>
                     </div>
                 </Navbar>
-                <div className="banner">
-	                <img src={hands2} alt="Banner" />
-	                <h2>Teachers Connect</h2>
-			    </div>
             </div>
         );
     }
