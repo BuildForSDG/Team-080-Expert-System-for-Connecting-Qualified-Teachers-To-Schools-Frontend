@@ -32,7 +32,7 @@ class SignIn extends Component {
                         <input type="text" className="form-control" placeholder="Email" />
                         <input type="password" className="form-control" placeholder="Password" />
                     </form>
-                    <p className="forget-password"><Link style={{ textDecoration: 'none', color:'#3f2c90' }}>Forget Password?</Link></p>
+                    <p className="forget-password"><Link to="#" style={{ textDecoration: 'none', color:'#3f2c90' }}>Forget Password?</Link></p>
                     <Button className="sign-in-button">Sign in</Button>
                     <div className="already-have-an-account"><p>Already have an account? <span><Link to="/welcome" style={{ textDecoration: 'none', color:'#3f2c90' }}>Sign up</Link></span></p></div>
                 </div>

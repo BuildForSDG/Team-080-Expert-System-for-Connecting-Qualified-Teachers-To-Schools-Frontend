@@ -289,3 +289,14 @@ img {
   font-size: 14px;
   color: #3f2c90;
 }
+
+.steps {
+	display: flex;
+	flex-flow: row wrap;
+  width: 97%;
+  margin: 5px;
+  height: 82px;
+  border-radius: 9px;
+  background-color: #f5f7fb;
+}
+

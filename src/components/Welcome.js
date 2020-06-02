@@ -25,7 +25,7 @@ class Welcome extends Component {
                     <span className="linkedin"><img src={linkedin} alt="linkedin logo" /></span> 
                     <div>Sign in with LinkedIn</div>
                 </div>
-                <Link to="/createAcc" className="create" style={{ textDecoration: 'none', color:'white' }}>Create an Account</Link>
+                <Link to="/create-account" className="create" style={{ textDecoration: 'none', color:'white' }}>Create an Account</Link>
                 <div className="sign-in"><span className="Already-have-an-acco">Already have an account?</span> <Link to="/signin" className="signin" style={{ textDecoration: 'none', color:'white' }} >Sign in</Link></div>
             </div>
             </div>
