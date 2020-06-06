@@ -1,20 +1,17 @@
 barebones setup for JavaScript / Node projects replace this with a one-liner phrase describing this project or app
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2625e7368cb14db1807b9ba8fa05e422)](https://app.codacy.com/gh/BuildForSDG/Expert-System-for-Connecting-Qualified-Teachers-To-Schools?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Expert-System-for-Connecting-Qualified-Teachers-To-Schools&utm_campaign=Badge_Grade_Settings)
-[![Codacy Badge](https://img.shields.io/badge/Code%20Quality-D-red)](https://img.shields.io/badge/Code%20Quality-D-red)
+
+
+![picture](images/TeacherTurfSignUpPage.png)
+![picture](images/TeacherTurfLoginPage.png)
+![picture](images/TeacherTurfLoadingPage.png)
+![picture](images/TeacherTurfInterviewPage.png)
 
 
 ## About
 
-What is this project about. Ok to enrich here or the section above it with an image. 
-
-Once this repo has been setup on Codacy by the TTL, replace the above badge with the actual one from the Codacy dashboard, and add the code coverage badge as well. This is mandatory
-
-This is a simple JavaScript starter repo template for setting up your project. The setup contains
-
-- Jest: For runnung tests. We strongly recommend that JavaScript projects use Jest
-
-- Eslint & Prettier: For formatting code to match ESlint AirBnB coding standard. You might need to install the ESlint and Prettier plugins for your code editor to make the most of these utilities
+TeachersTurf help connects qualified teachers with schools in other to increase access to quality eduction in Nigeria. 
 
 ## Why
 
