@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import BasicDetails from './BasicDetails';
 import Certificate from './Certificate';
+import Assessment from './Assessment';
+import CreateAccount from './CreateAccount';
 
 class ProcessForm extends Component {
     state = {
-        step: 1,
-        firstName: '',
-        lastName: '',
-        email: '',
-        age: '',
-        city: '',
-        country: ''
+        step: 1
+        
     }
 
     nextStep = () => {
@@ -27,29 +23,29 @@ class ProcessForm extends Component {
         })
     }
 
-    handleChange = input => event => {
-        this.setState({ [input] : event.target.value })
-    }
-
+   
     render(){
         
         const {step} = this.state;
-        const { firstName, lastName, email, age, city, country } = this.state;
-        const values = { firstName, lastName, email, age, city, country };
+        
       
         switch(step) {
-        case 1:
-            return <BasicDetails
-                    nextStep={this.nextStep}
-                    handleChange = {this.handleChange}
-                    values={values}
-                    />
         case 2:
+            return <CreateAccount
+                    nextStep={this.nextStep}
+                
+                    />
+        case 1:
             return <Certificate
                     nextStep={this.nextStep}
                     prevStep={this.prevStep}
-                    handleChange = {this.handleChange}
-                    values={values}
+                    
+                    />
+         case 3:  
+                    return <Assessment
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    
                     />
       
         }

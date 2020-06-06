@@ -157,3 +157,168 @@ img {
 	height: 48px ;
 	color: #ffffff;
 }
+
+#next {
+	background-color: #3F2C90;
+	margin-left: 82%;
+	border-radius: 15px ;
+	height: 48px ;
+	color: #ffffff;
+}
+
+#previous {
+	background-color: #3F2C90;
+	border-radius: 15px ;
+	height: 48px ;
+	color: #fffffff3;
+}
+
+
+/* Sign in style */
+
+.sign-in-header {
+	display: flex;
+	flex-direction: row;
+  width: 100%;
+  height: 204px;
+  background-color: #3f2c90;
+}
+
+
+.group-icon {
+  width: 154px;
+  height: 165px;
+  object-fit: contain;
+}
+
+.signIn {
+	flex-grow: 2;
+  width: 75px;
+  height: 30px;
+  margin-left: 30px;
+  font-family: CircularStd;
+  font-size: 24px;
+  font-weight: 500;
+  color: #fffffe;
+}
+
+.first-div{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.welcome-back {
+	position: absolute;
+	top: 184px;
+  	width: 100%;
+  	height: 61px;
+  	border-radius: 15px;
+  	background-color: #ffffff;
+  	padding-top: 30px;
+  	padding-left: 30px;
+}
+
+.welcome-back > p {
+  width: 168px;
+  height: 30px;
+  font-family: CircularStd;
+  font-size: 24px;
+  font-weight: 900;
+  color: #002152;
+}
+
+@media(min-width: 500px){
+	.welcome-back {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.sign-in-form {
+	position: relative;
+	top: 38px;
+	width: 80%;
+	margin-left: 30px;
+	font-family: CircularStd;
+	font-size: 14px;
+	font-weight: 500;
+	color: #8e98aa;
+}
+
+.sign-in-form > p {
+	margin-bottom: 40px;
+}
+
+.sign-in-form > form :nth-child(1){
+	margin-bottom: 23px;
+}
+
+.sign-in-form > form > * {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: solid 1px #dfdfe7;
+  background-color: #ffffff;
+}
+
+.sign-in-button {
+  width: 100%;
+  height: 40px;
+  opacity: 0.4;
+  border-radius: 25px;
+  background-color: #3f2c90;
+  margin-bottom: 150px;
+}
+
+@media(min-width: 500px){
+
+	.sign-in-form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.sign-in-form > form > * {
+	  width: 308px;
+	}
+
+	.sign-in-button {
+	  width: 308px;
+	  height: 50px;
+	}
+}
+
+.forget-password {
+  margin-top: 20px;
+  font-family: CircularStd;
+  font-size: 13px;
+  font-weight: 500;
+  color: #3f2c90;
+}
+
+.already-have-an-account {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+  font-family: CircularStd;
+  font-size: 14px;
+  color: #8e98aa;
+}
+
+.already-have-an-account > p > span {
+  font-size: 14px;
+  color: #3f2c90;
+}
+
+.steps {
+	display: flex;
+	flex-flow: row wrap;
+  width: 97%;
+  margin: 5px;
+  height: 82px;
+  border-radius: 9px;
+  background-color: #f5f7fb;
+}
+

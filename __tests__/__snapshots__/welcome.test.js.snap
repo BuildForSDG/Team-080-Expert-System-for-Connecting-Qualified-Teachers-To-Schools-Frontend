@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome component renders welcome page correctly 1`] = `
+<div>
+  <div>
+    <nav
+      className="navbar navbar-expand-md navbar-dark"
+    >
+      <div
+        className="container"
+      >
+        <a
+          className="mr-auto logo navbar-brand"
+          href="/"
+        >
+           
+          <img
+            alt="Logo"
+            src=""
+          />
+        </a>
+        <ul
+          className="ml-auto navbar-nav"
+        >
+          <li
+            className="nav-item"
+          >
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/schools"
+              onClick={[Function]}
+            >
+              <span
+                className="fa fa-user-plus fa-lg"
+              />
+              <button
+                aria-label={null}
+                className="butn btn btn-secondary"
+                onClick={[Function]}
+              >
+                 For Schools
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div
+    className="welcome"
+  >
+    <div
+      className="teacher_vector"
+    >
+      <img
+        alt="teacher vector"
+        src=""
+      />
+    </div>
+    <div
+      className="message"
+    >
+      <h4>
+        Welcome Teacher
+      </h4>
+      <p
+        className="get_hired"
+      >
+        Get ready to get hired by becoming a TeachersTurf Pro
+      </p>
+    </div>
+    <div
+      className="rectangle"
+    >
+      <span
+        className="linkedin"
+      >
+        <img
+          alt="linkedin logo"
+          src=""
+        />
+      </span>
+      <div>
+        Sign in with LinkedIn
+      </div>
+    </div>
+    <a
+      className="create"
+      href="/create-account"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "white",
+          "textDecoration": "none",
+        }
+      }
+    >
+      Create an Account
+    </a>
+    <div
+      className="sign-in"
+    >
+      <span
+        className="Already-have-an-acco"
+      >
+        Already have an account?
+      </span>
+       
+      <a
+        className="signin"
+        href="/signin"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "white",
+            "textDecoration": "none",
+          }
+        }
+      >
+        Sign in
+      </a>
+    </div>
+  </div>
+</div>
+`;
