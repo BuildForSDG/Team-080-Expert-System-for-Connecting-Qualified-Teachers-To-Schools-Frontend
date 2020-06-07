@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
-import Welcome from './Welcome';
-import SignIn from './SignIn';
-import CreateAccount from './CreateAccount';
+import Welcome from './welcome';
+import SignIn from './signIn';
+import BasicDetailsHeader from './basicDetailsHeader';
 
 
 class Main extends Component {
@@ -13,7 +13,7 @@ class Main extends Component {
 				<Switch>
 					<Route path="/welcome" component={() =>  <Welcome /> } />
 					<Route path="/signin" component={() =>  <SignIn /> } />
-					<Route path="/create-account" component={() =>  <CreateAccount /> } />
+					<Route path="/create-account" component={() =>  <BasicDetailsHeader /> } />
 					<Redirect to="/welcome" />
 				</Switch>
 			</div>

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
+import BasicDetails from './basicDetail';
 
 
 
-class CreateAccount extends Component {
+class BasicDetailsHeader extends Component {
     
 
     render() {
@@ -47,12 +48,12 @@ class CreateAccount extends Component {
                         }}>Assessment</div>
                     </div>
 
-                    <h5 style={{fontWeight: 900, color: '#002152'}} >Basic Details</h5>
                 </div>
-                
+
+                <BasicDetails />  
             </div>
         );
     }
 }
 
-export default CreateAccount;
+export default BasicDetailsHeader;

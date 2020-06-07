@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import teacher from '../banner/teacher.png';
-import linkedin from '../banner/linkedin.png'
+import teacher from '../assets/teacher.png';
+import linkedin from '../assets/linkedin.png'
 import { NavLink, Link } from 'react-router-dom';
-import Header from './Header';
+import Header from './header';
 
 
 

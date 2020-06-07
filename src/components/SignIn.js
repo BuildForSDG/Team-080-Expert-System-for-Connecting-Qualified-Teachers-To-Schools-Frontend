@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
-import group from '../banner/group.png';
+import group from '../assets/group.png';
 import { FiArrowLeft } from 'react-icons/fi';
 
 
