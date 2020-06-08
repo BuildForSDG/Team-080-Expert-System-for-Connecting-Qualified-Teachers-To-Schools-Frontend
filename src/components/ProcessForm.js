@@ -4,19 +4,25 @@ import Assessment from './Assessment';
 import CreateAccount from './CreateAccount';
 
 class ProcessForm extends Component {
-    state = {
-        step: 1
-        
+    constructor(props) {
+        super(props);
+        this.nextStep = this.nextStep.bind(this);
+        this.prevStep = this.prevStep.bind(this);
+        this.state = {
+            step: 1
+            
+        }
     }
+    
 
-    nextStep = () => {
+    nextStep() {
         const { step } = this.state
         this.setState({
             step : step + 1
         })
     }
 
-    prevStep = () => {
+    prevStep() {
         const { step } = this.state
         this.setState({
             step : step - 1

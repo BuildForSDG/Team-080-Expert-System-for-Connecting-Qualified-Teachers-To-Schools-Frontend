@@ -34,7 +34,7 @@ onChangeSetDegree(e) {
   }
 
 
-    handleChange = date => {
+    handleChange(date) {
         this.setState({
             startDate: date,
             endDate: date
@@ -46,7 +46,7 @@ onChangeSetDegree(e) {
         this.props.nextStep();
     }
 
-    back = (e) => {
+    back(e) {
         e.preventDefault();
         this.props.prevStep();
     }
