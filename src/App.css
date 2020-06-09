@@ -302,5 +302,59 @@ img {
 
 /*Create account*/
 
+.nextbuttn {
+  width: 122px;
+  height: 50px;
+  float: right;
+  margin-top: 35px;
+  opacity: 0.59;
+  border-radius: 25px;
+  background-color: #3f2c90;
+}
 
+.uploader-icon {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 
+.assess-icon {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.take-assessment {
+  width: 138px;
+  height: 34px;
+  border: 0;
+  border-radius: 5px;
+  background-color: rgba(63, 44, 144, 0.25);
+  font-size: 12px;
+  font-weight: 600;
+  color: #3f2c90;
+}
+
+.skip-buttn{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.assessment-text{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  color:#8e98aa;
+  margin-top:50px;
+  font-weight:500; 
+  font-size:14px;
+  padding-right:5px;
+  padding-left:20px;
+}
+
+@media(min-width: 700px){
+  .assessment-text{
+    width: 60%;
+  }
+}

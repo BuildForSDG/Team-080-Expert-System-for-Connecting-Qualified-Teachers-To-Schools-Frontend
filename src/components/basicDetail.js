@@ -8,7 +8,7 @@ const required = (val) => val && val.length;
 const maxLength = (len) => (val) => !(val) || (val.length <= len);
 const minLength = (len) => (val) => (val) && (val.length >= len);
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-const passwordsMatch = (vals) => vals.password !== vals.confirmPassword;
+const passwordsMatch = (vals) => vals.password === vals.confirmPassword;
 
 
 class BasicDetails extends Component {
@@ -57,8 +57,30 @@ class BasicDetails extends Component {
         return(
             <div className="container">
                 <div className="row">
+
+                    <div className="steps" >
+                        <div className="step-1" 
+                            style={{ width: '33%', height: '82px', paddingTop: '20px', paddingLeft: '15px',
+                              opacity: 0.3, borderRadius: '9px 0 0 9px', backgroundColor: '#3f2c90'
+                        }}>
+                            <div style={{ fontSize: '12px', fontWeight: 500, color: '#d2d2d2'}} >STEP 01</div>
+                            <div style={{fontSize: '14px', fontWeight: 500, color: '#e6e6e6'}}>Basic Details</div>
+                        </div>
+                        <div className="step-2"
+                            style={{width: '32%', height: '82px', paddingTop: '20px', paddingLeft: '15px'}} >
+                            <div  style={{fontSize: '12px', fontWeight: 500, color: '#d2d2d2'}}>STEP 02</div>
+                            <div style={{fontSize: '14px', fontWeight: 500, color: '#e6e6e6'}}>Education</div>
+                        </div>
+                        <div className="step-3"
+                            style={{width: '32%', height: '82px', paddingTop: '20px', paddingLeft: '15px'}}>
+                            <div  style={{fontSize: '12px', fontWeight: 500, color: '#d2d2d2'}}>STEP 03</div>
+                            <div style={{fontSize: '14px', fontWeight: 500, color: '#e6e6e6'}}>Assessment</div>
+                        </div>
+                    </div>
+
                     <div className="col-12">
-                        <h4 style={{fontWeight: 900, color: '#002152'}}>Basic Details</h4>
+                        <h4 style={{fontWeight: 900, color: '#002152', marginTop:'25px'}}>Basic Details</h4>
+                        <h6 style={{color:'#8e98aa'}} >Please fill some of the details to get started</h6>
                     </div>
                 </div>
                 
@@ -234,12 +256,19 @@ class BasicDetails extends Component {
                                 </Col>
                             </Row>
                             
+                            
                             <Row className="form-group">
-                                <Col md={{size:12, offset: 8}}>
-                                <p className="error">{this.state.error}</p>
-                                    <Link to='#'>
-                                        <Button className="buttn" disabled={!this.props.isadmin} type="submit">
-                                            Next
+                                <Col className="col-sm-5">
+                                    <Link to="/welcome" style={{ textDecoration: 'none', color:'black', marginTop:'35px'}}>
+                                        <div className="previousLink" style={{ marginTop:'50px'}}>
+                                            <p style={{fontSize:'14px', fontWeight: 500, color:'#7e8c95'}} >Back</p>
+                                        </div>
+                                    </Link>
+                                </Col>
+                                <Col className="col-sm-5">
+                                    <Link to="/education">
+                                        <Button className="nextbuttn" type="button">
+                                            Next Step
                                         </Button>
                                     </Link>
                                 </Col>
