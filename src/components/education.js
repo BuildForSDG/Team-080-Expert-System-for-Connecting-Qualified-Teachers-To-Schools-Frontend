@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, Button, Label, Col, Row } from 'reactstrap';
+import { Button, Label, Col, Row } from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
 import DropZone from './dropZone';
 //import SchoolDate from './datePicker';
@@ -12,6 +12,15 @@ const required = (val) => val && val.length;
 
 class Education extends Component {
     
+    constructor(props) {
+        super(props);
+
+        this.sendFiles = this.sendFiles.bind(this);
+    }
+
+    sendFiles(files) {
+        this.props.getFiles(files)
+    }
 
     render() {
 
@@ -101,7 +110,7 @@ class Education extends Component {
 
                             <Row className="form-group" style={{marginTop: '30px'}} >
                                 <Col md={10}>
-                                    <DropZone /> 
+                                    <DropZone sendFiles={this.sendFiles} /> 
                                 </Col>
                             </Row>
                             

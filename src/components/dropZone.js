@@ -3,8 +3,27 @@ import 'react-dropzone-uploader/dist/styles.css';
 import Dropzone from 'react-dropzone-uploader';
 import uploader from '../assets/uploader.png';
 
+import { Label, Col, Row } from 'reactstrap';
+import { Control, Form, Errors } from 'react-redux-form';
+
+import { getDroppedOrSelectedFiles } from 'html5-file-selector';
+
+
+
+
+
 
 class DropZone extends Component{
+
+  constructor(props) {
+      super(props);
+
+      this.sendToStore = this.sendToStore.bind(this);
+  }
+
+  sendToStore(files) {
+      this.props.sendFiles(files)
+  }
 
 	render(){
 
@@ -45,17 +64,49 @@ class DropZone extends Component{
           allFiles.forEach(f => f.remove())
         }
 
+
+        const Input = ({ accept, onFiles, files, getFilesFromEvent }) => {
+          const text = files.length > 0 ? 'Add more files' : 'Choose files'
+
+          return (
+            <label style={{ backgroundColor: '#007bff', color: '#fff', cursor: 'pointer', padding: 15, borderRadius: 3 }}>
+              {text}
+              <input
+                style={{ display: 'none' }}
+                type="file"
+                accept={accept}
+                multiple
+                onChange={e => {
+                  getFilesFromEvent(e).then(chosenFiles => {
+                    onFiles(chosenFiles)
+                  })
+                }}
+              />
+            </label>
+          )
+        }
+
+        const getFilesFromEvent = e => {
+          return new Promise(resolve => {
+            getDroppedOrSelectedFiles(e).then(chosenFiles => {
+              resolve(chosenFiles.map(f => console.log(f.fileObject)))
+            })
+          })
+        }
+
+
 		return(
 
 			<>
-				<Dropzone accept="image/*"
-                  getUploadParams={getUploadParams}
-                  LayoutComponent={Layout}
-                  inputContent={customInput}
-                  styles={{ dropzone: { backgroundColor: '#f9fbfc',
-                            border: 'solid 1px #dfdfe7', borderRadius: '5px',
-                            width: '100%', height: 200  } }}
-                />
+				<Dropzone 
+          accept="image/*"
+          getUploadParams={getUploadParams}
+          LayoutComponent={Layout}
+          inputContent={customInput}
+          styles={{ dropzone: { backgroundColor: '#f9fbfc',
+                    border: 'solid 1px #dfdfe7', borderRadius: '5px',
+                    width: '100%', height: 200  } }}
+        />
 
 			</>
 
