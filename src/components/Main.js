@@ -160,6 +160,9 @@ class Main extends Component {
 	componentDidMount(){
 		this.getIdParamAndSwitch();
 		this.matchScore();
+		this.setState({
+    		text: 'Next Question'
+    	});
 		console.log('Component DID MOUNT!')
 	}
 
@@ -189,14 +192,14 @@ class Main extends Component {
 	    }) 
 
 	    const { subject, level } = this.props.subjectlevel;
-	    const url = `https://opentdb.com/api.php?amount=20&category=${parseInt(subject)}&difficulty=${level}&type=multiple`;
 
-	    if (match != null && subject != '' && level != '') {
+	    if (match) {
 
-	     	this.props.fetchQuiz(url);
-	      	console.log('Fetching quizes...!')
+	    	this.setState({
+	    		text: 'Next Question'
+	    	});
 	    }
-	    else if (match != null && subject == '' && level == '') {
+	    if (match != null && subject == '' && level == '') {
 
 	     	this.props.history.push('/assessment');
 	      	console.log('Got param!')

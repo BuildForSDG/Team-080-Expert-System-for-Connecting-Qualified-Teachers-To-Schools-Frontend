@@ -440,6 +440,12 @@ img {
   padding-top: 12px;
 }
 
+@media(min-width: 700px){
+  .answerOption, .quiz-buttn {
+    width: 800px; 
+  }
+}
+
 .radioCustomButton {
   width: 22px;
   height: 22px;
@@ -482,4 +488,18 @@ img {
   width: 60%;
   margin-left: 60px;
   margin-top: 90px;
+}
+
+@media(min-width: 800px) {
+  .score {
+    width: 40%;
+    margin-left: 300px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .score {
+    width: 30%;
+    margin-left: 460px;
+  }
 }
