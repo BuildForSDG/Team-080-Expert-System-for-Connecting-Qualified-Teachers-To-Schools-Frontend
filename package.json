@@ -18,12 +18,7 @@
     "test:cover": "jest --coverage",
     "lint": "eslint \"src/**/*.js\"",
     "start": "parcel ./src/index.html",
-<<<<<<< HEAD
     "build": "parcel build ./src/index.html --out-dir docs --public-url ./"
-=======
-    "predeploy": "rm -rf dist && parcel build ./src/index.html --public-url https://github.com/BuildForSDG/Team-080-Expert-System-for-Connecting-Qualified-Teachers-To-Schools-Frontend.git",
-    "deploy": "gh-pages -d dist"
->>>>>>> 79d8f107751b1768c7740c760bc2c1e0a1143647
   },
   "author": {
     "name": "Build For SDG",

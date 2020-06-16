@@ -3,7 +3,6 @@ import { Card, CardImg, CardTitle, CardBody, CardSubtitle, CardText, Button } fr
 import { Link } from 'react-router-dom';
 import { Loading } from './loading';
 //import GetOneQuiz from './getOneQuiz';
-import Timer from './timer';
 
 import { Control, Form } from 'react-redux-form';
 
@@ -152,7 +151,7 @@ class Quiz extends React.Component {
                     </div>
 
                     <div className="quiz-number">{end} of {quizes.length}</div>
-                    <div className="timer"><Timer /></div>
+                    <div className="timer">Timer</div>
                 </div>
                 
                 <div className=" containerBorder">
