@@ -3,5 +3,5 @@ export const InitialEducation = {
     institution: '',
     startdate: '',
     enddate: '',
-    files: ''
+    uploadedfiles: []
 }
