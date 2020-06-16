@@ -37,8 +37,8 @@ class SubjectAndLevel extends Component {
 
 	disableAssessmentButton() {
 		console.log('disable called')
-		let subject = this.props.subjectlevel.subject;
-		let level = this.props.subjectlevel.level;
+		let { subject, level } = this.props.subjectlevel;
+		//let level = this.props.subjectlevel.level;
 		return subject && level ? false : true;
 	}
 
