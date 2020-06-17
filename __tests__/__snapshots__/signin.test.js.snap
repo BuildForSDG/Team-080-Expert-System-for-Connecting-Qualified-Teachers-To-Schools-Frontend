@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign in component renders sign in page correctly 1`] = `
+<div
+  className="login-page"
+>
+  <div
+    className="sign-in-header"
+  >
+    <div
+      className="signIn"
+    >
+      <div
+        className="first-div"
+      >
+        <a
+          href="/welcome"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "white",
+              "textDecoration": "none",
+            }
+          }
+        >
+          <svg
+            fill="none"
+            height="1em"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line
+              x1="19"
+              x2="5"
+              y1="12"
+              y2="12"
+            />
+            <polyline
+              points="12 19 5 12 12 5"
+            />
+          </svg>
+        </a>
+      </div>
+      <div>
+        <p>
+          Sign in
+        </p>
+      </div>
+    </div>
+    <img
+      alt="group header"
+      className="group-icon"
+      src=""
+    />
+  </div>
+  <div
+    className="welcome-back"
+  >
+    <p>
+      Welcome Back
+    </p>
+  </div>
+  <div
+    className="sign-in-form"
+  >
+    <p>
+      Hello there, Sign in to continue!
+    </p>
+    <form>
+      <input
+        className="form-control"
+        placeholder="Email"
+        type="text"
+      />
+      <input
+        className="form-control"
+        placeholder="Password"
+        type="password"
+      />
+    </form>
+    <p
+      className="forget-password"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#3f2c90",
+            "textDecoration": "none",
+          }
+        }
+      >
+        Forget Password?
+      </a>
+    </p>
+    <button
+      aria-label={null}
+      className="sign-in-button btn btn-secondary"
+      onClick={[Function]}
+    >
+      Sign in
+    </button>
+    <div
+      className="already-have-an-account"
+    >
+      <p>
+        Already have an account? 
+        <span>
+          <a
+            href="/welcome"
+            onClick={[Function]}
+            style={
+              Object {
+                "color": "#3f2c90",
+                "textDecoration": "none",
+              }
+            }
+          >
+            Sign up
+          </a>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+`;
