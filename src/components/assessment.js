@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import BasicDetails from './basicDetail';
 import assess from '../assets/assess.jpg';
 import { Button, Col, Row } from 'reactstrap';
+import { Control, Form, Errors } from 'react-redux-form';
+import SubjectAndLevel from './subjectAndLevel';
+
+
 
 
 
 
 
 class Assessment extends Component {
+
+    constructor(props){
+        super(props);
+
+        this.callApi = this.callApi.bind(this);
+    }
+
+    callApi(url){
+        this.props.fetchQuiz(url)
+    }
     
 
     render() {
@@ -41,13 +54,13 @@ class Assessment extends Component {
                     <div className="assessment-text">
                         <p>Show the Schools what you can do and distinguish yourself from others</p>
 
-                        <p>The Test will only take 30-40 minutes of your time. The tests consist majorly of Mathematics, 
-                            English and General Knowledge questions. You need to score at least 80% to pass. Good luck!
+                        <p>The Test will only take 30-40 minutes of your time. You need to score at least 80% to pass. Good luck!
                         </p>
                     </div>
 
-                    <div style={{marginTop:'15px'}} ><Link to="/"><Button className="take-assessment">Take Assessment</Button> </Link></div>
-
+                    <SubjectAndLevel callApi={this.callApi} clearQuizState={this.props.clearQuizState} 
+                                    subjectlevel={this.props.subjectlevel} clearQuizCount={this.props.clearQuizCount}
+                                    resetScore={this.props.resetScore} />
                 </div>
 
                 <Row className="form-group" style={{padding:'20px', marginTop:'130px'}} >
