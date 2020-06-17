@@ -21,7 +21,7 @@ class Header extends Component {
                     </div>
                 </Navbar>
             </div>
-        );
+        )
     }
 }
 

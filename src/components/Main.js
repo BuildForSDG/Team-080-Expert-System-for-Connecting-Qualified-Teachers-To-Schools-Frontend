@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect, matchPath, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import Welcome from './welcome';
 import SignIn from './signIn';
 import BasicDetails from './basicDetail';
 import Education from './education';
-import Assessment from './assessment';
+import Assessment from './Assessment';
 import StartQuiz from './startQuiz';
 import Quiz from './quiz';
 import Score from './score';

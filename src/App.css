@@ -150,6 +150,28 @@ img {
   color: #ffffff;
 }
 
+#id {
+	background-color: #3F2C90;
+	margin-left: 90%;
+	border-radius: 15px ;
+	height: 48px ;
+	color: #ffffff;
+}
+
+#next {
+	background-color: #3F2C90;
+	margin-left: 82%;
+	border-radius: 15px ;
+	height: 48px ;
+	color: #ffffff;
+}
+
+#previous {
+	background-color: #3F2C90;
+	border-radius: 15px ;
+	height: 48px ;
+	color: #fffffff3;
+}
 
 
 /* Sign in style */
