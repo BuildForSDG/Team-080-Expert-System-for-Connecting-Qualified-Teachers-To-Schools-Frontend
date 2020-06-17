@@ -1,8 +1,7 @@
-import React, { Component ,PropTypes} from 'react';
-import { NavLink, Link,withRouter } from 'react-router-dom';
-import Form from 'react-bootstrap/Form'
-import Button from 'react-bootstrap/Button'
-import group from '../banner/group.png';
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { Button } from 'reactstrap';
+import group from '../assets/group.png';
 import { FiArrowLeft } from 'react-icons/fi';
 import axios from 'axios';
 
@@ -126,7 +125,7 @@ class SignIn extends Component {
                                                 </Button>
                                                 <div className="already-have-an-account"><p>Already have an account? <span><Link to="/welcome" style={{ textDecoration: 'none', color: '#3f2c90' }}>Sign up</Link></span></p></div>
                                                 <li className="forget-password">
-                                                    <Link to = "forgotpassword" style={{ textDecoration: 'none', color: '#3f2c90' }}>Forgot Your Password?</Link>
+                                                    <Link to = "/" style={{ textDecoration: 'none', color: '#3f2c90' }}>Forgot Your Password?</Link>
                                                 </li>
                                     
                                         </div>
@@ -138,4 +137,4 @@ class SignIn extends Component {
     }
 }
 
-export default withRouter(SignIn);
+export default SignIn;

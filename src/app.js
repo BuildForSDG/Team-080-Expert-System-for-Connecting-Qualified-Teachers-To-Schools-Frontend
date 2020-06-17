@@ -11,9 +11,12 @@ import './App.css';
 
 import "bootstrap/dist/css/bootstrap.css";
 import { HashRouter } from 'react-router-dom';
-import Main from './components/Main';
+import Main from './components/main';
+import { Provider } from 'react-redux';
+import { ConfigureStore } from './redux/configureStore';
 
 
+const store = ConfigureStore();
 
 
 
@@ -24,11 +27,13 @@ class App extends Component {
   
   
         return (
+        <Provider store={store}>
           <HashRouter>
             <div className="">
                 <Main />
             </div>
           </HashRouter>
+         </Provider>
         );
     }
 

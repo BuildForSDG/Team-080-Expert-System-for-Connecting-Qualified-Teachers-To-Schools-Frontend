@@ -1,0 +1,11 @@
+export const GET_FILES = 'GET_FILES';
+
+export const GET_QUIZ_LOADING = 'GET_QUIZ_LOADING';
+export const GET_QUIZ_LOADED = 'GET_QUIZ_LOADED';
+export const GET_QUIZ_FAILED = 'GET_QUIZ_FAILED';
+
+export const SET_CORRECT_ANSWER = 'SET_CORRECT_ANSWER';
+
+
+
+
