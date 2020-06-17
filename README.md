@@ -1,4 +1,4 @@
-barebones setup for JavaScript / Node projects replace this with a one-liner phrase describing this project or app
+Barebones setup for JavaScript / Node projects replace this with a one-liner phrase describing this project or app
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2625e7368cb14db1807b9ba8fa05e422)](https://app.codacy.com/gh/BuildForSDG/Expert-System-for-Connecting-Qualified-Teachers-To-Schools?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Expert-System-for-Connecting-Qualified-Teachers-To-Schools&utm_campaign=Badge_Grade_Settings)
 
@@ -6,7 +6,7 @@ barebones setup for JavaScript / Node projects replace this with a one-liner phr
 
 ## About
 
-TeachersTurf help connects qualified teachers with schools in other to increase access to quality eduction in Nigeria. 
+TeachersTurf helps connect qualified teachers to schools in other to increase access to quality eduction in Nigeria. 
 
 ## Why
 
