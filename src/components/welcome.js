@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import teacher from '../assets/teacher.png';
 import linkedin from '../assets/linkedin.png'
 import { NavLink, Link } from 'react-router-dom';
-import Header from './header';
+import Header from './Header';
 
 
 
