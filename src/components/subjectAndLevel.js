@@ -86,20 +86,9 @@ class SubjectAndLevel extends Component {
 	                    	validators={{required}} 
                     	>
 	                        <option value="" >Select Level</option>
-	                        <option value="easy">Montessori</option>
-	                        <option value="easy">Nursery</option>
-	                        <option value="easy">Primary 1</option>
-	                        <option value="easy">Primary 2</option>
-	                        <option value="easy">Primary 3</option>
-	                        <option value="easy">Primary 4</option>
-	                        <option value="medium">Primary 5</option>
-	                        <option value="medium">Primary 6</option>
-	                        <option value="medium">JSS 1</option>
-	                        <option value="medium">JSS 2</option>
-	                        <option value="hard">JSS 3</option>
-	                        <option value="hard">SS 1</option>
-	                        <option value="hard">SS 2</option>
-	                        <option value="hard">SS 3</option>
+	                        <option value="easy">Nursery and Primary</option>
+	                        <option value="medium">Junior Secondary</option>
+	                        <option value="hard">Senior Secondary</option>
 	                    </Control.select>
 	                    <Errors className="text-danger" model=".institution" show="touched"
                             messages={{
