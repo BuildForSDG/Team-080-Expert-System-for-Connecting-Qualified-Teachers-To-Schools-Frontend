@@ -506,22 +506,56 @@ img {
   margin-top: 10px;
 }
 
+.score-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .score{
   width: 60%;
-  margin-left: 60px;
   margin-top: 90px;
 }
 
 @media(min-width: 800px) {
   .score {
     width: 40%;
-    margin-left: 300px;
   }
 }
 
 @media(min-width: 1000px) {
   .score {
     width: 30%;
-    margin-left: 460px;
+  }
+}
+
+.score-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+.finish {
+  background-color: #3f2c90;
+  color: #ffff;
+  border-radius: 25px;
+  border-color: #3f2c90;
+  height: 50px;
+  width: 100%; 
+  margin-top: 50px;
+}
+
+.finish:hover {
+    background-color: #3f2c90;
+}
+
+@media(min-width: 800px) {
+  .finish, .score-message3 {
+    width: 345px;
+    /*margin-left: 300px;*/
   }
 }
