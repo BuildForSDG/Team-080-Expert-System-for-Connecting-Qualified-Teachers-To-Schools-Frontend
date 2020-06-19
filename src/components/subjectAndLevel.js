@@ -45,69 +45,72 @@ class SubjectAndLevel extends Component {
 	render(){
 
 		return(
-			<Form model="subjectlevel" onSubmit={(subjectlevel) => this.handleSubmit(subjectlevel)}>
-				<Row className="form-group">
-	                <Col md={12}>
-	                    <Control.select 
-	                    	model=".subject" 
-	                    	name="subject" 
-	                    	className="form-control"
-	                    	validators={{required}}
-                    	>
-	                        <option value="" >Select Subject</option>
-	                        <option value="23">History</option>
-	                        <option value="22">Geography</option>
-	                        <option value="18">Nature Science</option>
-	                        <option value="10">Computer Science</option>
-	                        <option value="21">Sports</option>
-	                        <option disabled>Mathematics</option>
-	                        <option disabled>English</option>
-	                        <option disabled>Literature in English</option>
-	                        <option disabled>Introductory Technology</option>
-	                        <option value="9">General Knowledge</option>
-	                        <option disabled>Physics</option>
-	                        <option disabled>Chemistry</option>
-	                        <option disabled>Social Studies</option>
-	                        <option disabled>Accounting</option>
-	                    </Control.select>
-	                    <Errors className="text-danger" model=".institution" show="touched"
-                            messages={{
-                                required: 'This field is required'
-                            }}
-                        />
-	                </Col>
-	            </Row>
-	            <Row className="form-group">
-	                <Col md={12}>
-	                    <Control.select 
-	                    	model=".level" 
-	                    	name="level" 
-	                    	className="form-control"
-	                    	validators={{required}} 
-                    	>
-	                        <option value="" >Select Level</option>
-	                        <option value="easy">Nursery and Primary</option>
-	                        <option value="medium">Junior Secondary</option>
-	                        <option value="hard">Senior Secondary</option>
-	                    </Control.select>
-	                    <Errors className="text-danger" model=".institution" show="touched"
-                            messages={{
-                                required: 'This field is required'
-                            }}
-                        />
-	                </Col>
-	            </Row>
-	            <Row className="form-group">
-                    <Col className="col-sm-12">
-                        <div style={{marginTop:'15px'}} >
-                        		<Button className="take-assessment" disabled={this.disableAssessmentButton()} type="submit">
-                        			Take Assessment
-                        		</Button> 
-                		</div>
-                    </Col>
-                </Row>
+			<div className="col-sm-12 col-md-4">
+				<Form model="subjectlevel" onSubmit={(subjectlevel) => this.handleSubmit(subjectlevel)}>
+					<Row className="form-group">
+		                <Col md={12}>
+		                    <Control.select 
+		                    	model=".subject" 
+		                    	name="subject" 
+		                    	className="form-control"
+		                    	validators={{required}}
+	                    	>
+		                        <option value="" >Select Subject</option>
+		                        <option value="23">History</option>
+		                        <option value="22">Geography</option>
+		                        <option value="18">Nature Science</option>
+		                        <option value="10">Computer Science</option>
+		                        <option value="21">Sports</option>
+		                        <option disabled>Mathematics</option>
+		                        <option disabled>English</option>
+		                        <option disabled>Literature in English</option>
+		                        <option disabled>Introductory Technology</option>
+		                        <option value="9">General Knowledge</option>
+		                        <option disabled>Physics</option>
+		                        <option disabled>Chemistry</option>
+		                        <option disabled>Social Studies</option>
+		                        <option disabled>Accounting</option>
+		                    </Control.select>
+		                    <Errors className="text-danger" model=".institution" show="touched"
+	                            messages={{
+	                                required: 'This field is required'
+	                            }}
+	                        />
+		                </Col>
+		            </Row>
+		            <Row className="form-group">
+		                <Col md={12}>
+		                    <Control.select 
+		                    	model=".level" 
+		                    	name="level" 
+		                    	className="form-control"
+		                    	validators={{required}} 
+	                    	>
+		                        <option value="" >Select Level</option>
+		                        <option value="easy">Nursery and Primary</option>
+		                        <option value="medium">Junior Secondary</option>
+		                        <option value="hard">Senior Secondary</option>
+		                    </Control.select>
+		                    <Errors className="text-danger" model=".institution" show="touched"
+	                            messages={{
+	                                required: 'This field is required'
+	                            }}
+	                        />
+		                </Col>
+		            </Row>
+		            <Row className="form-group">
+	                    <Col className="col-sm-12">
+	                        <div style={{marginTop:'15px'}} >
+	                        		<Button className="take-assessment" disabled={this.disableAssessmentButton()} type="submit">
+	                        			Take Assessment
+	                        		</Button> 
+	                		</div>
+	                    </Col>
+	                </Row>
 
-	    	</Form>
+	                
+		    	</Form>
+	    	</div>
 		);
 	}
 }

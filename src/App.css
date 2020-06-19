@@ -537,3 +537,45 @@ img {
     /*margin-left: 300px;*/
   }
 }
+
+.date-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.start-1 {
+  width: 150px;
+  margin-left: 15px;
+}
+
+
+.end-1 {
+  width: 150px;
+
+  margin-left: 10px;
+}
+
+@media(min-width: 800px) {
+  .date-container {
+    width: 64.5%;
+  }
+  .start-1, .end-1 {
+    width: 47.3%;
+  }
+  .end, .start {
+    width: 220px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .date-container {
+    width: 65.5%;
+  }
+  .start-1, .end-1 {
+    width: 48.3%;
+  }
+  .end, .start {
+    width: 361px;
+  }
+}
+
