@@ -104,7 +104,7 @@ class Score extends React.Component {
                                 Unfortunately, you didnt pass this time, but not to worry, try and brush up your
                                 knowledge and try agin in 30 days time.
                             </p>
-                            <Button className="finish">Finish</Button>
+                            <Link to="/"><Button className="finish">Finish</Button></Link>
                         </div>
                     </div>
                 }   
