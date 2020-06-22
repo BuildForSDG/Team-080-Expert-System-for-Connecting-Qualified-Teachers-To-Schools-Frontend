@@ -30,7 +30,7 @@ export default function SignIn(props) {
             return localStorage.getItem('email') ? 
             setTimeout(() => {
                 history.replace(from);
-            }, 4000) : null;
+            }, 2000) : null;
         }
         else return console.log('invalid email');
     }
