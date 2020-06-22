@@ -4,7 +4,6 @@ export default app;*/
 
 
 import React, {Component} from 'react';
-import './App.css';
 
 
 

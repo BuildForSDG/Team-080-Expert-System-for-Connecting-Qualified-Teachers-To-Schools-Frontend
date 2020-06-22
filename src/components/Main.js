@@ -10,18 +10,21 @@ import StartQuiz from './startQuiz';
 import Quiz from './quiz';
 import Score from './score';
 
-import { getFiles, fetchQuiz } from '../redux/ActionCreators';
+import { loginUser, logoutUser, getFiles, fetchQuiz } from '../redux/ActionCreators';
 
 
 const mapStateToProps = state => {
     return {
-      files: state.files,
-      quizes: state.quizes,
-      subjectlevel: state.subjectlevel,
+        auth: state.auth,
+        files: state.files,
+        quizes: state.quizes,
+        subjectlevel: state.subjectlevel,
     }
 }
 
 const mapDispatchToProps = (dispatch) => ({
+    loginUser: (email, password) => dispatch(loginUser(email, password)),
+    logoutUser: () => dispatch(logoutUser()),
   	getFiles: (files) => {dispatch(getFiles(files))},
   	fetchQuiz: (url) => {dispatch(fetchQuiz(url))},
   	//setCorrectAnswer: (correct_answer) => {dispatch(setCorrectAnswer(correct_answer))}
@@ -210,7 +213,8 @@ class Main extends Component {
 			<div>
 				<Switch>
 					<Route path="/welcome" component={() =>  <Welcome /> } />
-					<Route path="/signin" component={() =>  <SignIn /> } />
+					<Route path="/signin" component={() =>  <SignIn auth={this.props.auth} loginUser={this.props.loginUser}
+                                                                errMess={this.props.auth.errMess}  /> } />
 					<Route path="/create-account" component={() =>  <BasicDetails /> } />
 					<Route path="/education" component={() =>  <Education getFiles={this.props.getFiles} /> } />
 					<Route path="/assessment" component={() =>  <Assessment fetchQuiz={this.props.fetchQuiz} clearQuizState={this.setQuizState} 

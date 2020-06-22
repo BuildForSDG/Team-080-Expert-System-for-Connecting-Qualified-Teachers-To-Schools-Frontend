@@ -1,5 +1,70 @@
-
 import * as ActionTypes from './ActionTypes';
+
+
+// Login 
+
+export const requestLogin = () => {
+    return {
+        type: ActionTypes.LOGIN_REQUEST
+    }
+}
+  
+export const receiveLogin = () => {
+    return {
+        type: ActionTypes.LOGIN_SUCCESS
+    }
+}
+  
+export const loginError = (message) => {
+    return {
+        type: ActionTypes.LOGIN_FAILURE,
+        message
+    }
+}
+
+
+
+export const loginUser = (email, password) => (dispatch) => {
+    // We dispatch requestLogin to kickoff the call to the API
+    dispatch(requestLogin())
+
+    // If login was successful, set the token in local storage
+    const storage = localStorage.setItem('email', email);
+    // Dispatch the success action
+    dispatch(receiveLogin());
+};
+
+// Login user ends
+
+
+
+
+
+
+// Logs the user out
+
+export const requestLogout = () => {
+    return {
+      type: ActionTypes.LOGOUT_REQUEST
+    }
+}
+  
+export const receiveLogout = () => {
+    return {
+      type: ActionTypes.LOGOUT_SUCCESS
+    }
+}
+
+
+export const logoutUser = () => (dispatch) => {
+    dispatch(requestLogout())
+    localStorage.removeItem('token');
+    localStorage.removeItem('creds');
+    dispatch(receiveLogout())
+}
+
+// Logs the user out ends
+
 
 
 
@@ -15,19 +80,6 @@ export const getfiles = (files) => {
 
 export const getFiles = (files) => (dispatch) => {
 	dispatch(getfiles(files));
-}
-
-
-// Set correct answer for comparison
-export const setanswer  = (correct_answer) => {
-    return {
-        type: ActionTypes.SET_CORRECT_ANSWER,
-        payload: correct_answer
-    }
-}
-
-export const setCorrectAnswer = (correct_answer) => (dispatch) => {
-	dispatch(setanswer(correct_answer));
 }
 
 
