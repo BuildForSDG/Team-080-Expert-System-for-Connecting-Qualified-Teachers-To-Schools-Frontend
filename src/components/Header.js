@@ -15,7 +15,11 @@ class Header extends Component {
                     	</NavbarBrand>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" to='/schools'><span className="fa fa-user-plus fa-lg"></span><Button className="butn"> For Schools</Button></NavLink>
+                                    <NavLink className="nav-link" to='/schools'>
+                                        <Button style={{borderRadius:'20px',background:'transparent',opacity: 0.8}} className="butn"> 
+                                            For Schools
+                                        </Button>
+                                    </NavLink>
                                 </NavItem>
                             </Nav>
                     </div>

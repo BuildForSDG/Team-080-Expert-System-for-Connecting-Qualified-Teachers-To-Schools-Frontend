@@ -3,7 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { Button, Label, Col, Row } from 'reactstrap';
 import { Control, Form, Errors } from 'react-redux-form';
 import DropZone from './dropZone';
-//import SchoolDate from './datePicker';
+import SchoolDate from './datePicker';
 
 
 
@@ -27,7 +27,7 @@ class Education extends Component {
         
 
         return(
-            <div className="container" >
+            <div className="container">
                 <div className="row">
                     <div className="steps" >
                         <div className="step-1" 
@@ -54,7 +54,7 @@ class Education extends Component {
                     </div>
 
 
-                    <div className="col-12 col-md-9" style={{marginTop:'20px'}}>
+                    <div className="col-sm-12" style={{marginTop:'50px'}}>
                         <Form model="education" onSubmit={(education) => this.handleSubmit(education)}>
                             <Row className="form-group">
                                 <Label htmlFor="certificatetype" md={2}>Certificate Type</Label>
@@ -84,28 +84,8 @@ class Education extends Component {
                             </Row>
                             
                             <Row className="form-group" style={{marginTop: '30px'}}>
-                                <Col className="col-sm-5">
-                                    <Control.text model=".startdate" id="startdate" name="startdate" placeholder="Start Date" className="form-control"
-                                        validators={{required}}
-                                         />
-                                    <Errors className="text-danger" model=".startdate" show="touched"
-                                        messages={{
-                                            required: 'Start date is required'
-                                        }}
-                                     />
-                                </Col>
-                                
-
-                                <Col className="col-sm-5">
-                                    <Control.text model=".enddate" id="enddate" name="enddate" placeholder="End Date" className="form-control"
-                                        validators={{required}}/>
-                                    <Errors className="text-danger" model=".enddate" show="touched"
-                                        messages={{
-                                            required: 'End date is required'
-                                        }}
-                                     />
-                                </Col>
-                                
+                                <Label md={2}>Dates</Label>
+                                <SchoolDate />   
                             </Row>
 
                             <Row className="form-group" style={{marginTop: '30px'}} >
@@ -117,16 +97,27 @@ class Education extends Component {
    
                             
                             <Row className="form-group">
-                                <Col className="col-sm-5">
+                                <Col className="col-sm-6">
                                     <Link to="/create-account" style={{ textDecoration: 'none', color:'black', marginTop:'35px'}}>
                                         <div className="previousLink" style={{ marginTop:'50px'}}>
                                             <p style={{fontSize:'14px', fontWeight: 500, color:'#7e8c95'}} >Previous Step</p>
                                         </div>
                                     </Link>
                                 </Col>
-                                <Col className="col-sm-5">
+                                <Col className="col-sm-6">
                                     <Link to="/assessment">
-                                        <Button className="nextbuttn" type="button">
+                                        <Button 
+                                            style={{
+                                                width: '122px',
+                                                height: '50px',
+                                                float: 'right',
+                                                marginTop: '35px',
+                                                opacity: 0.59,
+                                                borderRadius: '25px',
+                                                borderColor: '#3f2c90',
+                                                backgroundColor: '#3f2c90'
+                                            }} 
+                                            className="nextbuttn" type="button">
                                             Next Step
                                         </Button>
                                     </Link>

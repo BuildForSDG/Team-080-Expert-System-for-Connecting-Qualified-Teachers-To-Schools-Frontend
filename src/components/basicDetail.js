@@ -84,197 +84,206 @@ class BasicDetails extends Component {
                     </div>
                 </div>
                 
-                <div className="row row-content">
                     
-                    <div className="col-12 col-md-9">
-                        <Form model="reguser" onSubmit={(reguser) => this.handleSubmit(reguser)}>
-                            <Row className="form-group">
-                                <Label htmlFor="firstname" md={2}>First Name</Label>
-                                <Col md={8}>
-                                    <Control.text model=".firstname" id="firstname" name="firstname"
-                                        placeholder="First Name" className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(15)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".firstname" show="touched"
-                                        messages={{
-                                            required: 'This field is required, ',
-                                            minLength: 'Must be greater than 2 characters',
-                                            maxLength: 'Must be 15 characters or less'
-                                        }}
+                <div className="col-sm-12">
+                    <Form model="reguser" onSubmit={(reguser) => this.handleSubmit(reguser)}>
+                        <Row className="form-group">
+                            <Label htmlFor="firstname" md={2}>First Name</Label>
+                            <Col md={6}>
+                                <Control.text model=".firstname" id="firstname" name="firstname"
+                                    placeholder="First Name" className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(3), maxLength: maxLength(15)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="lastname" md={2}>Last Name</Label>
-                                <Col md={8}>
-                                    <Control.text model=".lastname" id="lastname" name="lastname"
-                                        placeholder="Last Name" className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(15)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".lastname" show="touched"
-                                        messages={{
-                                            required: 'This field is required, ',
-                                            minLength: 'Must be greater than 2 characters',
-                                            maxLength: 'Must be 15 characters or less'
-                                        }}
+                                <Errors className="text-danger" model=".firstname" show="touched"
+                                    messages={{
+                                        required: 'This field is required, ',
+                                        minLength: 'Must be greater than 2 characters',
+                                        maxLength: 'Must be 15 characters or less'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="lastname" md={2}>Last Name</Label>
+                            <Col md={6}>
+                                <Control.text model=".lastname" id="lastname" name="lastname"
+                                    placeholder="Last Name" className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(3), maxLength: maxLength(15)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            
-                            <Row className="form-group">
-                                <Label htmlFor="email" md={2}>Email</Label>
-                                <Col md={8}>
-                                    <Control.text model=".email" id="email" name="email" placeholder="Email" className="form-control"
-                                        validators={{
-                                            required, validEmail
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".email" show="touched"
-                                        messages={{
-                                            required: 'Required, ',
-                                            validEmail: 'Invalid Email Address'
-                                        }}
+                                <Errors className="text-danger" model=".lastname" show="touched"
+                                    messages={{
+                                        required: 'This field is required, ',
+                                        minLength: 'Must be greater than 2 characters',
+                                        maxLength: 'Must be 15 characters or less'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        
+                        <Row className="form-group">
+                            <Label htmlFor="email" md={2}>Email</Label>
+                            <Col md={6}>
+                                <Control.text model=".email" id="email" name="email" placeholder="Email" className="form-control"
+                                    validators={{
+                                        required, validEmail
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="password" md={2}>Password</Label>
-                                <Col md={8}>
-                                    <Control.text type="password" model=".password" id="password" name="password"
-                                        placeholder="Password" className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(8), maxLength: maxLength(15)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".password" show="touched"
-                                        messages={{
-                                            required: 'Required, ',
-                                            minLength: 'Must be greater than 8 characters',
-                                            maxLength: 'Must be 15 characters or less',
-                                        }}
+                                <Errors className="text-danger" model=".email" show="touched"
+                                    messages={{
+                                        required: 'Required, ',
+                                        validEmail: 'Invalid Email Address'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="password" md={2}>Password</Label>
+                            <Col md={6}>
+                                <Control.text type="password" model=".password" id="password" name="password"
+                                    placeholder="Password" className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(8), maxLength: maxLength(15)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="confirmpassword" md={2}>Confirm Password</Label>
-                                <Col md={8}>
-                                    <Control.text type="password" model=".confirmpassword" id="confirmpassword" name="confirmpassword"
-                                        placeholder="Confirm Password" className="form-control"
-                                        validators={{
-                                            required, passwordsMatch, minLength: minLength(8), maxLength: maxLength(15)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".confirmpassword" show="touched"
-                                        messages={{
-                                            required: 'Required, ',
-                                            passwordsMatch: "Passwords don't matched",
-                                            minLength: 'Must be greater than 8 characters',
-                                            maxLength: 'Must be 15 characters or less',
-                                        }}
+                                <Errors className="text-danger" model=".password" show="touched"
+                                    messages={{
+                                        required: 'Required, ',
+                                        minLength: 'Must be greater than 8 characters',
+                                        maxLength: 'Must be 15 characters or less',
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="confirmpassword" md={2}>Confirm Password</Label>
+                            <Col md={6}>
+                                <Control.text type="password" model=".confirmpassword" id="confirmpassword" name="confirmpassword"
+                                    placeholder="Confirm Password" className="form-control"
+                                    validators={{
+                                        required, passwordsMatch, minLength: minLength(8), maxLength: maxLength(15)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="phonenumber" md={2}>Phone Number</Label>
-                                <Col md={8}>
-                                    <Control.text model=".phonenumber" id="phonenumber" name="phonenumber"
-                                        placeholder="Phone Number"
-                                        className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(50)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".phonenumber" show="touched"
-                                        messages={{
-                                            required: 'This field is required, ',
-                                            minLength: 'Must be greater than 3 characters',
-                                            maxLength: 'Must be 50 characters or less'
-                                        }}
+                                <Errors className="text-danger" model=".confirmpassword" show="touched"
+                                    messages={{
+                                        required: 'Required, ',
+                                        passwordsMatch: "Passwords don't matched",
+                                        minLength: 'Must be greater than 8 characters',
+                                        maxLength: 'Must be 15 characters or less',
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="phonenumber" md={2}>Phone Number</Label>
+                            <Col md={6}>
+                                <Control.text model=".phonenumber" id="phonenumber" name="phonenumber"
+                                    placeholder="Phone Number"
+                                    className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(3), maxLength: maxLength(50)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="country" md={2}>Country</Label>
-                                <Col md={8}>
-                                    <Control.select model=".country" name="country" className="form-control">
-                                        <option></option>
-                                        <option>Nigeria</option>
-                                        <option>Ghana</option>
-                                    </Control.select>
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="state" md={2}>State</Label>
-                                <Col md={8}>
-                                    <Control.text model=".state" id="state" name="state"
-                                        placeholder="State"
-                                        className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(50)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".state" show="touched"
-                                        messages={{
-                                            required: 'This field is required, ',
-                                            minLength: 'Must be greater than 3 characters',
-                                            maxLength: 'Must be 50 characters or less'
-                                        }}
+                                <Errors className="text-danger" model=".phonenumber" show="touched"
+                                    messages={{
+                                        required: 'This field is required, ',
+                                        minLength: 'Must be greater than 3 characters',
+                                        maxLength: 'Must be 50 characters or less'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="country" md={2}>Country</Label>
+                            <Col md={6}>
+                                <Control.select model=".country" name="country" className="form-control">
+                                    <option></option>
+                                    <option>Nigeria</option>
+                                    <option>Ghana</option>
+                                </Control.select>
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="state" md={2}>State</Label>
+                            <Col md={6}>
+                                <Control.text model=".state" id="state" name="state"
+                                    placeholder="State"
+                                    className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(3), maxLength: maxLength(50)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="city" md={2}>City</Label>
-                                <Col md={8}>
-                                    <Control.text model=".city" id="city" name="city"
-                                        placeholder="City"
-                                        className="form-control"
-                                        validators={{
-                                            required, minLength: minLength(3), maxLength: maxLength(50)
-                                        }}
-                                         />
-                                    <Errors className="text-danger" model=".city" show="touched"
-                                        messages={{
-                                            required: 'This field is required, ',
-                                            minLength: 'Must be greater than 3 characters',
-                                            maxLength: 'Must be 50 characters or less'
-                                        }}
+                                <Errors className="text-danger" model=".state" show="touched"
+                                    messages={{
+                                        required: 'This field is required, ',
+                                        minLength: 'Must be greater than 3 characters',
+                                        maxLength: 'Must be 50 characters or less'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="city" md={2}>City</Label>
+                            <Col md={6}>
+                                <Control.text model=".city" id="city" name="city"
+                                    placeholder="City"
+                                    className="form-control"
+                                    validators={{
+                                        required, minLength: minLength(3), maxLength: maxLength(50)
+                                    }}
                                      />
-                                </Col>
-                            </Row>
-                            <Row className="form-group">
-                                <Label htmlFor="gender" md={2}>Gender</Label>
-                                <Col md={8}>
-                                    <Control.select model=".gender" name="gender"className="form-control">
-                                        <option></option>
-                                        <option>Male</option>
-                                        <option>Female</option>
-                                    </Control.select>
-                                </Col>
-                            </Row>
-                            
-                            
-                            <Row className="form-group">
-                                <Col className="col-sm-5">
-                                    <Link to="/welcome" style={{ textDecoration: 'none', color:'black', marginTop:'35px'}}>
-                                        <div className="previousLink" style={{ marginTop:'50px'}}>
-                                            <p style={{fontSize:'14px', fontWeight: 500, color:'#7e8c95'}} >Back</p>
-                                        </div>
-                                    </Link>
-                                </Col>
-                                <Col className="col-sm-5">
-                                    <Link to="/education">
-                                        <Button className="nextbuttn" type="button">
-                                            Next Step
-                                        </Button>
-                                    </Link>
-                                </Col>
-                            </Row>
-                        </Form>
-                    </div>
+                                <Errors className="text-danger" model=".city" show="touched"
+                                    messages={{
+                                        required: 'This field is required, ',
+                                        minLength: 'Must be greater than 3 characters',
+                                        maxLength: 'Must be 50 characters or less'
+                                    }}
+                                 />
+                            </Col>
+                        </Row>
+                        <Row className="form-group">
+                            <Label htmlFor="gender" md={2}>Gender</Label>
+                            <Col md={6}>
+                                <Control.select model=".gender" name="gender"className="form-control">
+                                    <option></option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </Control.select>
+                            </Col>
+                        </Row>
+                        
+                        
+                        <Row className="form-group">
+                            <Col className="col-sm-6">
+                                <Link to="/welcome" style={{ textDecoration: 'none', color:'black', marginTop:'35px'}}>
+                                    <div className="previousLink" style={{ marginTop:'50px'}}>
+                                        <p style={{fontSize:'14px', fontWeight: 500, color:'#7e8c95'}} >Back</p>
+                                    </div>
+                                </Link>
+                            </Col>
+                            <Col className="col-sm-6">
+                                <Link to="/education">
+                                    <Button
+                                        style={{
+                                                width: '122px',
+                                                height: '50px',
+                                                float: 'right',
+                                                marginTop: '35px',
+                                                opacity: 0.59,
+                                                borderRadius: '25px',
+                                                borderColor: '#3f2c90',
+                                                backgroundColor: '#3f2c90'
+                                            }}
+                                        className="nextbuttn" type="button">
+                                        Next Step
+                                    </Button>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </Form>
                 </div>
             </div>
         );

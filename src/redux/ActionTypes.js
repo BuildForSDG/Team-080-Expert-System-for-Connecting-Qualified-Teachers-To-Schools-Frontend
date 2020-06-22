@@ -1,10 +1,15 @@
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+export const LOGOUT_REQUEST = 'LOGOUT_REQUEST';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const LOGOUT_FAILURE = 'LOGOUT_FAILURE';
+
 export const GET_FILES = 'GET_FILES';
 
 export const GET_QUIZ_LOADING = 'GET_QUIZ_LOADING';
 export const GET_QUIZ_LOADED = 'GET_QUIZ_LOADED';
 export const GET_QUIZ_FAILED = 'GET_QUIZ_FAILED';
-
-export const SET_CORRECT_ANSWER = 'SET_CORRECT_ANSWER';
 
 
 
