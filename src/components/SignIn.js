@@ -74,7 +74,7 @@ export default function SignIn(props) {
                     : null
                 }
                 </Button>
-                <div className="already-have-an-account"><p>Already have an account? <span><Link to="/welcome" style={{ textDecoration: 'none', color:'#3f2c90' }}>Sign up</Link></span></p></div>
+                <div className="already-have-an-account"><p>Already have an account? <span><Link to="/create-account" style={{ textDecoration: 'none', color:'#3f2c90' }}>Sign up</Link></span></p></div>
             </div>
         </div>
     );   
