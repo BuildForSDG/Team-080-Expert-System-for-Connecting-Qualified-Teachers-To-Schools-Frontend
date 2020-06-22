@@ -62,9 +62,6 @@ export default function SignIn(props) {
                 <p className="forget-password"><Link to="#" style={{ textDecoration: 'none', color:'#3f2c90' }}>Forget Password?</Link></p>
                 <Button
                     style={{
-                        width: '100%',
-                        height: '40px',
-                        opacity: 0.4,
                         borderRadius: '25px',
                         borderColor: '#3f2c90',
                         backgroundColor: '#3f2c90',
