@@ -5,10 +5,6 @@ export default app;*/
 
 import React, {Component} from 'react';
 
-
-
-
-import "bootstrap/dist/css/bootstrap.css";
 import { HashRouter } from 'react-router-dom';
 import Main from './components/main';
 import { Provider } from 'react-redux';

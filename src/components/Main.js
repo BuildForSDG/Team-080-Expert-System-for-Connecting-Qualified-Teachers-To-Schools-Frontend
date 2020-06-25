@@ -9,6 +9,7 @@ import Assessment from './Assessment';
 import StartQuiz from './startQuiz';
 import Quiz from './quiz';
 import Score from './score';
+import Dashboard from './dashboard';
 
 import { loginUser, logoutUser, getFiles, fetchQuiz } from '../redux/ActionCreators';
 
@@ -39,6 +40,7 @@ class Main extends Component {
             end: 1,
             count: 0,
             score: 0,
+            subject: null,
             text: 'Next Question'
         }
         this.nextQuiz = this.nextQuiz.bind(this);
@@ -84,7 +86,8 @@ class Main extends Component {
         	setTimeout(async () => {
         		let score = await (this.state.count / quizes.length ) * 100;
         		await this.setState({
-	        		score: score
+	        		score: score,
+                    subject: quizes[0].category
 	        	})
         	},1000)
         	
@@ -134,7 +137,8 @@ class Main extends Component {
 			console.log('set score')
         	let score = (this.state.count / quizes.length ) * 100;
         	this.setState({
-        		score: score
+        		score: score,
+                subject: quizes.category
         	})
 
         	//this.props.history.push('/assessment');
@@ -226,7 +230,8 @@ class Main extends Component {
 															start={this.state.start} end={this.state.end} score={this.state.score}
 															text={this.state.text} checked={this.props.checked} updateCount={this.updateCount} /> } />
 					<Route path="/score" component={() =>  <Score quizes={this.props.quizes} end={this.state.end} score={this.state.score}
-															count={this.state.count} /> } />
+															count={this.state.count} subject={this.state.subject} /> } />
+                    <Route path="/dashboard" component={() =>  <Dashboard score={this.state.score} subject={this.state.subject} /> } />
 					<Redirect to="/welcome" />
 				</Switch>
 			</div>
