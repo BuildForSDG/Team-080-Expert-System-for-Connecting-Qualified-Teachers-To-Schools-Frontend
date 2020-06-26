@@ -21,7 +21,9 @@ class Score extends React.Component {
     	let end = this.props.end;
     	let score = this.props.score;
     	let count = this.props.count;
+        let subject = this.props.subject;
     	console.log(`count is ${count}, score is ${score}`)
+        console.log(`subject is ${subject}`)
 
 
         return (
@@ -68,7 +70,7 @@ class Score extends React.Component {
                             <p style={{color:'#3f2c90', fontSize:'18px', fontWeight:'500'}} >Well Done!</p>
                             <p style={{color:'#2a2c30', fontSize:'24px', fontWeight:'500'}} >You’re an Expert </p>
                             <p style={{color:'#8e98aa', fontSize:'16px', fontWeight:'500'}} >You’ve just passed our tests</p>
-                            <Button className="finish">Finish</Button>
+                            <div className="finish-div"><Link to="/dashboard" style={{width:'100%'}}><Button className="finish">Finish</Button></Link></div>
 
                         </div>
                     </div>
@@ -104,7 +106,7 @@ class Score extends React.Component {
                                 Unfortunately, you didnt pass this time, but not to worry, try and brush up your
                                 knowledge and try agin in 30 days time.
                             </p>
-                            <Link to="/"><Button className="finish">Finish</Button></Link>
+                            <div className="finish-div"><Link to="/dashboard" style={{width:'100%'}}><Button className="finish">Finish</Button></Link></div>
                         </div>
                     </div>
                 }   
