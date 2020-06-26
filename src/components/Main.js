@@ -20,6 +20,7 @@ const mapStateToProps = state => {
         files: state.files,
         quizes: state.quizes,
         subjectlevel: state.subjectlevel,
+        reguser: state.reguser
     }
 }
 

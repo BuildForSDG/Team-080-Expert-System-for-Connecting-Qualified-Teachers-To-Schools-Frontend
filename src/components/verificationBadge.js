@@ -21,8 +21,8 @@ export default function VeriBadge (props) {
 					</div>
 					<div style={{fontSize:'12px',opacity:0.6,color:'#ffff'}}>
 						{ 
-							props.profileScore < 70 ? 
-								"Get at least 70% on Profile Completion and pass your Assement"
+							props.profileScore < 70 || props.score < 80 ? 
+								"Get at least 70% on Profile Completion and 80% on Assessment"
 							: 
 								"Your profile is now made available to Schools for contact"
 						}
