@@ -101,7 +101,19 @@ class SubjectAndLevel extends Component {
 		            <Row className="form-group">
 	                    <Col className="col-sm-12">
 	                        <div style={{marginTop:'15px'}} >
-	                        		<Button className="take-assessment" disabled={this.disableAssessmentButton()} type="submit">
+	                        		<Button 
+	                        			className="take-assessment" 
+	                        			disabled={this.disableAssessmentButton()} 
+	                        			type="submit"
+	                        			style={{
+	                        				border: 0,
+											borderRadius: '5px',
+											backgroundColor: 'rgba(63, 44, 144, 0.25)',
+											fontSize: '12px',
+											fontWeight: 600,
+											color: '#3f2c90'
+	                        			}}
+                        			>
 	                        			Take Assessment
 	                        		</Button> 
 	                		</div>

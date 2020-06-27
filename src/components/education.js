@@ -16,7 +16,17 @@ class Education extends Component {
         super(props);
 
         this.sendFiles = this.sendFiles.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
+
+    handleSubmit() {
+
+        let newUser = this.props.reguser;
+
+        this.props.postBasicDetails({newUser});
+
+    }
+
 
     sendFiles(files) {
         this.props.getFiles(files)
@@ -117,7 +127,7 @@ class Education extends Component {
                                                 borderColor: '#3f2c90',
                                                 backgroundColor: '#3f2c90'
                                             }} 
-                                            className="nextbuttn" type="button">
+                                            className="nextbuttn" type="submit">
                                             Next Step
                                         </Button>
                                     </Link>
