@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Card, CardBody, CardSubtitle, CardText } from 'reactstrap';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
